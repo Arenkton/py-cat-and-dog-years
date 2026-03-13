@@ -22,3 +22,7 @@ def test_get_human_age(cat_age: int,
 def test_invalid_type() -> None:
     with pytest.raises(TypeError):
         get_human_age("cat", "dog")
+
+def test_negative_age() -> None:
+    with pytest.raises(ValueError):
+        get_human_age(-1, -1)
